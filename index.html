@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Aparecida Nutrição</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1 class="titulo">Aparecida Nutrição</h1>
+        </div>
+    </header>
+    <main>
+        <h2>Meus Pacientes</h2>
+        <hr>
+        <table>
+            <thead>
+                <th>Nome</th>
+                <th>Peso(Kg)</th>
+                <th>Altura(m)</th>
+                <th>Gordura Corporal(%)</th>
+                <th>IMC</th>
+            </thead>
+            <tbody id="tabela-paciente">
+                <tr class="paciente">
+                    <td class="nome">João</td>
+                    <td class="peso">1000</td>
+                    <td class="altura">1.78</td>
+                    <td class="gordura">40</td>
+                    <td class="imc">0</td>
+                </tr>
+                <tr class="paciente">
+                    <td class="nome">Erica</td>
+                    <td class="peso">54</td>
+                    <td class="altura">1.64</td>
+                    <td class="gordura">14</td>
+                    <td class="imc">0</td>
+                </tr>
+                <tr class="paciente">
+                    <td class="nome">Douglas</td>
+                    <td class="peso">85</td>
+                    <td class="altura">3</td>
+                    <td class="gordura">24</td>
+                    <td class="imc">0</td>
+                </tr>
+                <tr class="paciente">
+                    <td class="nome">Tatiana</td>
+                    <td class="peso">46</td>
+                    <td class="altura">1.55</td>
+                    <td class="gordura">19</td>
+                    <td class="imc">0</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <!-- ... -->
+    <section class="container">
+        <h2 id="titulo-form">Adicionar novo paciente</h2>
+        <hr>
+        <ul id="mensagem-erro">
+            <li></li>
+        </ul>
+        <form id="form-adiciona">
+            <div class="primeiro">
+                <label for="nome">Nome:</label>
+                <input id="nome" name="nome" type="text" placeholder="digite o nome do seu paciente" class="campo" required>
+            </div>
+            <div class="grupo">
+                <label for="peso">Peso:</label>
+                <input id="peso" name="peso" type="text" placeholder="digite o peso do seu paciente"
+                    class="campo campo-medio" required>
+            </div>
+            <div class="grupo">
+                <label for="altura">Altura:</label>
+                <input id="altura" name="altura" type="text" placeholder="digite a altura do seu paciente"
+                    class="campo campo-medio" required>
+            </div>
+            <div class="grupo">
+                <label for="gordura">% de Gordura:</label>
+                <input id="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente"
+                    class="campo campo-medio" required>
+            </div>
+
+            <button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
+        </form>
+    </section>
+</body>
+<script src="js/calculaimc.js"></script>
+<script src="js/form.js"></script>
+</html>
