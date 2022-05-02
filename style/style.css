@@ -46,7 +46,7 @@ h3{
     width:25%;
     height: 27px;
     display: block;
-    margin: 0px 0 20px 0;
+    margin: 2px 0 5px 0;
 }
 
 table {
@@ -113,9 +113,9 @@ li{
 }
 
 
-#adicionar-paciente{
+#adicionar-paciente, #buscar-paciente{
     transition: 0.3s;
-    margin-top: 3%;
+    margin: 3% auto 5% 0;
     width: 20%;
     height: 45px;
     display: block;
@@ -126,11 +126,11 @@ li{
     font-size: 18px;
     background-color: rgba(17, 17, 255, 0.651);
 }
-#adicionar-paciente:hover{
+#adicionar-paciente:hover, #buscar-paciente:hover{
     transform: scale(1.05);
     background-color: rgba(17, 17, 255, 0.74);
 }
-#adicionar-paciente:active{
+#adicionar-paciente:active, #buscar-paciente:active{
     background-color: green;
 }
 
@@ -145,4 +145,40 @@ li{
 .remove{
     opacity: 0;
     transition: 0.5s;
+}
+.invisivel{
+    display:none;
+}
+
+@media screen and (max-width: 420px){
+    header,main{
+        width: 100%;
+    }
+    header h1{
+        font-size: 200%;
+        text-align: center;
+        padding-bottom: 5%;
+    }
+    h2{
+        margin-top: 8%;
+        font-size: 150%;
+        text-align: center;
+    }
+    h3{
+        width: 80%;
+    }
+    #filtro,label{
+        width: 50%;
+        margin-left: 2%;
+        margin-bottom: 3%;
+    }
+    #adicionar-paciente, #buscar-paciente{
+        width: 80%;
+        margin: 5% auto 5% auto;
+    }
+    hr{
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
 }

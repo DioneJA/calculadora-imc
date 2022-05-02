@@ -9,8 +9,6 @@ botao.addEventListener("click", function () {
     //extraindo paciente do formulario
     var paciente = obtemPaciente(form);
 
-    //cria td e tr do paciente
-    var pacienteTr = criaTr(paciente);
 
     //checa erros
     var erro = validaPaciente(paciente);
@@ -18,18 +16,21 @@ botao.addEventListener("click", function () {
         exibeErro(erro);
         return;
     }
-
-    //monta a tabela com o novo paciente
-    var tbody = document.querySelector("#tabela-paciente");
-    tbody.appendChild(pacienteTr);
-
-
+    adicionaPaciente(paciente);
     //Limpa os campos do formulario
     limpaFormulario(form);
     var ul = document.querySelector("#mensagem-erro");
     ul.innerHTML="";
 });
 
+function adicionaPaciente(paciente){
+    //cria td e tr do paciente
+    var pacienteTr = criaTr(paciente);
+     //monta a tabela com o novo paciente
+     var tbody = document.querySelector("#tabela-paciente");
+     tbody.appendChild(pacienteTr);
+
+}
 function obtemPaciente(form) {
     var paciente = {
         nome: form.nome.value,
